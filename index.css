@@ -1,0 +1,166 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GENERAL */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* ===== HEADER ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background:darkblue;
+    border-radius: 40px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color:wheat;
+    transition: 0.3s;
+}
+
+/* NAV HOVER */
+nav a:hover {
+    color: blue;
+    border-bottom: 2px solid blue;
+}
+
+/* BUTTONS */
+.btn {
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.primary {
+    background: blue;
+    color: white;
+}
+
+.secondary {
+    background: transparent;
+    border: 1px solid blue;
+    color: blue;
+}
+
+/* BUTTON HOVER */
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.primary:hover {
+    background: darkblue;
+}
+
+.secondary:hover {
+    background: blue;
+    color:white;
+}
+
+/* ===== HERO ===== */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 40px;
+    gap: 20px;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 20px;
+}
+
+/* ===== FEATURES ===== */
+.features {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.feature-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 20px;
+    
+}
+
+.card {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    color: darkred;
+    background-color:yellow;
+}
+
+/* CARD HOVER */
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* ===== ABOUT ===== */
+.about {
+    padding: 60px 20px;
+    text-align: center;
+    color:black;
+    background-color:white;
+    
+}
+
+.about p {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    padding: 20px;
+    background:#111827;
+    text-align: center;
+    border-radius: 20px;
+    
+}
+
+.footer-links {
+    margin-top: 20px;
+    
+}
+
+.footer-links a {
+    margin: 0 10px;
+    text-decoration:underline;
+    color:white;
+    
+    
+}
+
+/* FOOTER HOVER */
+.footer-links a:hover {
+    color:white;
+}
